@@ -1,10 +1,32 @@
-title: Just the Docs Template
+title: ebic Plugin Wiki's
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
-
 color_scheme: dark
 
 url: https://the-epic.github.io/docs
 
 aux_links:
-  Template Repository: https://github.com/The-Epic/just-the-docs
+  "Github Repo": https://github.com/the-epic/docs
+
+callouts_level: quiet
+callouts:
+  highlight:
+    color: yellow
+  how-to-read:
+    title: How to read this page
+    color: grey-dk
+  important:
+    title: Important
+    color: yellow
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  caution:
+    title: Caution
+    color: yellow
+  warning:
+    title: Warning
+    color: red
