@@ -15,23 +15,9 @@ Start by downloading the plugin from SpigotMC. You can find the plugin at [Simpl
 
 ## Step 2: Adding to Your Server
 
-### Local Hosting (On Your Current Device)
+Upload or Transfer the plugin to your plugins folder, if you need extra help follow this guide [https://docs.papermc.io/paper/adding-plugins](https://docs.papermc.io/paper/adding-plugins) 
 
-1. Locate the downloaded plugin file in your `Downloads` folder.
-2. Copy the file to your clipboard.
-3. Navigate to your server's `plugins` folder.
-4. Right-click on an empty space and choose "Paste" to move the file into the `plugins` folder.
-5. Restart your server to complete the installation.
-
-### Using a Hosting Company
-
-1. Access your server's control panel.
-2. Navigate to the files page.
-3. Open the `plugins` folder.
-4. Keep your device's file manager window open, and drag the downloaded plugin jar into the `plugins` folder in your browser.
-5. Go back to the console page and click the "Restart" button. If the "Restart" button is not available, click the "Stop" button and wait for the console to clear, then click the "Start" button.
-
-After following either of the above instructions, the plugin will be ready to use. If you want to reward your players for answering questions correctly, proceed to the next step.
+Once that's done restart your server.
 
 ## Step 3: Adding Rewards
 
