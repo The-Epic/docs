@@ -5,7 +5,7 @@ nav_order: 1
 ---
 
 # Epic's Plugin Wiki
-Find wiki's for all my plugins here, navigate from the side-bar or links below!
+Find wiki's for all my plugins here, navigate from the sidebar or links below!
 
 --- 
 
@@ -15,4 +15,4 @@ The information on these wiki's may not be correct, I sometimes forget to update
 
 ## Current Plugin Wiki's
 
-- [SimpleChatGames]()
+- [SimpleChatGames](/docs/simplechatgames/)

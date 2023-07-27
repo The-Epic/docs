@@ -8,6 +8,8 @@ url: https://the-epic.github.io/docs
 aux_links:
   "Github Repo": https://github.com/the-epic/docs
 
+enable_copy_code_button: true
+
 callouts_level: quiet
 callouts:
   highlight:
