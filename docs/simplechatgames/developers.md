@@ -65,6 +65,8 @@ duration: 30 # This is in seconds
 ```
 
 ## Setting up your main class
+New format (v2.0.0)
+{: .label .label-green }
 
 ```java
 import me.epic.chatgames.SimpleChatGames;
@@ -75,7 +77,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class MyPlugin extends JavaPlugin {
 
     private SimpleChatGames simpleChatGames;
-    private File gameConfig;
 
     @Override
     public void onEnable() {
@@ -83,7 +84,7 @@ public class MyPlugin extends JavaPlugin {
     }
     
     private void loadGameConfig() {
-        this.file = new File(getDataFolder(), "coolgame.yml");
+        File file = new File(getDataFolder(), "coolgame.yml");
         
         if (!this.getDataFolder().exists()) {
             this.getDataFolder().mkdirs();
@@ -93,12 +94,14 @@ public class MyPlugin extends JavaPlugin {
             this.saveResource("coolgame.yml", false);
         }
         
-        simpleChatGames.getGameManager().registerGame(new CoolGameData(YamlConfiguration.loadConfiguration(gameConfig)));
+        simpleChatGames.getGameManager().registerGame(new CoolGameData(file));
     }
 }
 ```
 
 ## Creating the Game Data
+New format (v2.0.0)
+{: .label .label-green }
 
 ```java
 import me.epic.chatgames.games.ChatGame;
@@ -108,8 +111,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 public class CoolGameData extends GameData {
 
-    public CoolGameData(YamlConfiguration config) {
-        super(config);
+    public CoolGameData(File file) {
+        super(super);
     }
 
     @Override
@@ -120,6 +123,8 @@ public class CoolGameData extends GameData {
 ```
 
 ## Creating the Game Class
+New format (v2.0.0)
+{: .label .label-green }
 
 ```java
 import me.epic.chatgames.games.ChatGame;
@@ -147,16 +152,8 @@ public class CoolGame extends ChatGame<CoolGameData> {
         // Handle start logic
         // This includes loading your questions, choosing a question, and setting the answer
 
-        // This may be changed to be handled in the parent class logic; keep an eye out for updates
-        if (manager.getPlugin().isDebugMode()) {
-            Bukkit.getOperators().forEach(offlinePlayer -> {
-                if (offlinePlayer.isOnline()) {
-                    Bukkit.getPlayer(offlinePlayer.getName()).sendMessage("Chat Game Answer: " + answer);
-                }
-            });
-        }
-
-        Timings.startTimings("coolgame-chatgame");
+      super.sendDebugAnswer(this.answer);
+      Timings.startTimings("coolgame-chatgame");
     }
 
     @Override
@@ -164,11 +161,8 @@ public class CoolGame extends ChatGame<CoolGameData> {
         super.win(player);
 
         // Handle win logic
-
-        // This may be subject to change
-        long timeTookLong = Timings.endTimings("coolgame-chatgame");
-        String finalTimeTook = String.format("%.2f", ((double) timeTookLong / 1000.0));
-        Utils.giveRewardAndNotify(manager.getPlugin(), player, gameData, finalTimeTook);
+      
+        Utils.giveRewardAndNotify(manager.getPlugin(), player, gameData, Timings.endTimings("coolgame-chatgame"));
         answer = "";
     }
 
