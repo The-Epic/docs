@@ -16,7 +16,16 @@ nav_order: 2
 
 The reward sub-command (`/cg reward`) allows you to configure various types of rewards for your players. After executing any of the following commands, kindly remember to [reload](#reload) the plugin to apply the changes.
 
+{: .note}
+Should any of the following commands tell you that the item was added but the reward is disabled, follow the next guide
+
 ### Setting Item Rewards
+
+
+**Quick Use**
+Hold the item you want and run `/cg reward set item`
+
+**Extended Guide**
 
 To add an item reward, please follow this guide:
 
@@ -26,7 +35,10 @@ To add an item reward, please follow this guide:
 
 ### Adding Command Rewards
 
-To include a command reward, please follow this guide:
+**Quick Use**
+Figure out your command, replace any player names needed with `%player_name%` and run `/cg reward set command cmdhere` without a starting slash
+
+**Extended Guide**
 
 1. Determine the desired command (e.g., `/give MyName diamond 16`).
 2. Write the command `/cg reward set command`, `%player_name%` and remove the beginning slash. 
@@ -34,12 +46,13 @@ For example, if the command is `/give MyName diamond 16`, the full command would
 
 ### Adding Economy Rewards
 
+**Quick Use**
+Run `/cg reward set economy <amount>` and just replace `<amount>` with how much you want to be given
+
+**Extended Guide**
 For economy rewards, it is required to have the Vault plugin installed. Confirm its on the server with the `/plugins` command.
 
 1. Run the command `/cg reward set economy <value>`, where `<value>` means the desired amount. For example, `/cg reward set economy 100` would grant players 100 units of your chosen currency.
-
-{: .note}
-Should any of these commands tell you that the item was added but the reward is disabled, follow the guide below
 
 
 ### Enabling and Disabling Rewards
