@@ -15,4 +15,4 @@ The information on these wiki's may not be correct, I sometimes forget to update
 
 ## Current Plugin Wiki's
 
-- [SimpleChatGames](/docs/simplechatgames/)
+- [SimpleChatGames](/simplechatgames/)
